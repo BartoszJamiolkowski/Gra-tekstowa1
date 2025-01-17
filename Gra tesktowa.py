@@ -1,7 +1,13 @@
 import random
 def gra():
-    lista = ["samuraj", "wojownik"]
+    lista = ["samuraj", "wojownik"]  
     
+    print("Witaj w grze tekstowej!")
+    print("Twoim zadaniem będzie udzielanie odpowiedzi tak/nie.")
+    print("Miasto Denver od stuleci symbolizuje spokój i dobrobyt.")
+    print("Od pewnego czasu miasto jest w wielkim niebezpieczeństwie.")
+    print("Tajemniczy i dotąd nieznany Klan Umb chce zatruć miasto i je okraść. Jesteś wybawcą miasta Denver.")
+   
     print("         O                     O")
     print("        /|\\                   /|\\")
     print("       / | \\                 / | \\")
@@ -26,14 +32,7 @@ def gra():
     print(" ")
     print("      Samuraj                Wojownik")
     print("")
-    
-    
-    print("Witaj w grze tekstowej!")
-    print("Twoim zadaniem będzie udzielanie odpowiedzi tak/nie.")
-    print("Miasto Denver od stuleci symbolizuje spokój i dobrobyt.")
-    print("Od pewnego czasu miasto jest w wielkim niebezpieczeństwie.")
-    print("Tajemniczy i dotąd nieznany Klan Umb chce zatruć miasto i je okraść. Jesteś wybawcą miasta Denver.")
-   
+
     print("Wybierz klasę swojej postaci:", ", ".join(lista))
     while True:
         klasa_postaci = input("Wpisz nazwę klasy: ").lower()
@@ -50,7 +49,7 @@ def gra():
             if odpowiedz in ["tak", "nie"]:
                 return odpowiedz
    
-    def zla_wybror():
+    def zly_wybror():
         while True:
             odpowiedz=input("Niepoprawna odpowiedź. Odpowiedz snajperzy/strażnicy:").strip().lower()
             if odpowiedz in ["snajperzy","strażnicy"]:
@@ -123,7 +122,7 @@ def gra():
                             print("Zostajesz bohaterem Denver!")
                             zakonczenie()
                         elif odpowiedz=="nie":
-                            print("Po długi godzinach rozmów dochodzi do porzumienia.")
+                            print("Po długich godzinach rozmów dochodzi do porozumienia.")
                             print("Klan Umb opuszcza miasto,mieszkańcy zaczynają żyć spokojnie w mieście.")
                             zakonczenie()
                     elif odpowiedz=="nie":
@@ -144,7 +143,7 @@ def gra():
                     odpowiedz=zla_odpowiedz()
                 if odpowiedz=="tak":
                     print("Podążasz na miejsce spotkania Klanu Umb, kryjąc się w cieniu.")
-                    print("Widząc zgromenie wroga, postanawiasz podsłuchać ich rozmowy.")
+                    print("Widząc zgromadzenie wroga, postanawiasz podsłuchać ich rozmowy.")
                     print("Dowiadujesz się, że planują zaatakować miasto o świcie.")
                     print("Czy chcesz wrócić do miasta, by ostrzec mieszkańców?")
                     odpowiedz=input("Odpowiedz tak/nie:").strip().lower()
@@ -194,7 +193,7 @@ def gra():
                         print("Denver zostaje przejęte przez Klan Umb.")
                         zakonczenie()
                     elif odpowiedz=="nie":
-                        print("Nikt was nie wierzył.")
+                        print("Nikt w was nie wierzył.")
                         print("Udaje się wam przezwyciężyć całą armię Klanu Umb.")
                         print("Zostajecie okryci chwałą, a miasto Denver jest uwolnione od cięmiężcy.")
                         zakonczenie()
@@ -216,12 +215,12 @@ def gra():
                         zakonczenie()
             elif odpowiedz=="nie":
                 print("Omijacie dźwignię, ale droga staje się coraz bardziej niebezpieczna.")
-                print("Docieracie do komnaty glównej, zostajesz sam, gdyż twoi komapani polegli.")
+                print("Docieracie do komnaty głównej, zostajesz sam, gdyż twoi komapani polegli.")
                 print("Czeka Cię ostateczna próba.")
-                print("Postanawiasz zaatkaować snajperów czy strażników?")
+                print("Postanawiasz zaatakaować snajperów czy strażników?")
                 odpowiedz=input("Odpowiedz snajperzy/strażnicy:").strip().lower()
                 while odpowiedz not in ["snajperzy", "strażnicy"]:
-                    odpowiedz=zla_wybror()
+                    odpowiedz=zly_wybror()
                 if odpowiedz=="snajperzy":
                     print("Walka ze snajpera okazuje się prostsza niż się wydawała.")
                     print("Udaje Ci się pokonać snajperów.Czeka na Ciebie lider Klanu Umb.")
@@ -256,7 +255,7 @@ def gra():
                 while odpowiedz not in ["tak","nie"]:
                     odpowiedz=zla_odpowiedz()
                 if odpowiedz=="tak":
-                    print("Udaje Ci się pokonać karła swoją nadludzką siła.")
+                    print("Udaje Ci się pokonać karła swoją nadludzką siłą.")
                     print("Zostaje jednakże pokonany przez lidera Klanu Umb.")
                     print("Miasto zostaje otrute.")
                     zakonczenie()
